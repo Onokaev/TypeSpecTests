@@ -1,0 +1,80 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Repairs Hub",
+    "x-ai-description": "Plugin to add, update, remove, and view repair objects.",
+    "x-description-for-human": "Manage your repairs and maintenance tasks.",
+    "version": "0.0.0"
+  },
+  "tags": [],
+  "paths": {
+    "/repairs": {
+      "get": {
+        "operationId": "listRepairs",
+        "description": "List all repairs.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Repair"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Repair": {
+        "type": "object",
+        "required": [
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for the repair."
+          },
+          "title": {
+            "type": "string",
+            "description": "The short summary or title of the repair."
+          },
+          "description": {
+            "type": "string",
+            "description": "The detailed description of the repair."
+          },
+          "assignedTo": {
+            "type": "string",
+            "description": "The user who is assigned to the repair."
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The optional date and time when the repair is scheduled or completed."
+          },
+          "image": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL of the image associated with the repair."
+          }
+        },
+        "description": "A model representing a repair."
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://repairshub.azurewebsites.net",
+      "description": "Repairs Hub API",
+      "variables": {}
+    }
+  ]
+}

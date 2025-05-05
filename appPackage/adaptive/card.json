@@ -1,0 +1,130 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "Meeting Invitation",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "Please join us for an important project discussion",
+      "wrap": true
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://adaptivecards.io/content/calendar.png",
+              "size": "Small",
+              "altText": "Calendar icon"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "April 30, 2025",
+              "weight": "Bolder",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "None",
+              "text": "9:00 AM - 10:30 AM",
+              "wrap": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Location",
+      "weight": "Bolder",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "Conference Room 3B",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "Agenda",
+      "weight": "Bolder",
+      "spacing": "Medium",
+      "wrap": true
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "1.",
+          "value": "Project updates"
+        },
+        {
+          "title": "2.",
+          "value": "Timeline review"
+        },
+        {
+          "title": "3.",
+          "value": "Resource allocation"
+        }
+      ]
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "attendanceStatus",
+      "style": "compact",
+      "label": "Will you attend?",
+      "isRequired": true,
+      "choices": [
+        {
+          "title": "Yes",
+          "value": "yes"
+        },
+        {
+          "title": "No",
+          "value": "no"
+        },
+        {
+          "title": "Maybe",
+          "value": "maybe"
+        }
+      ]
+    },
+    {
+      "type": "Input.Text",
+      "id": "comments",
+      "placeholder": "Add any comments or questions",
+      "label": "Comments"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Submit RSVP",
+      "data": {
+        "action": "submit"
+      }
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "View Meeting Details",
+      "url": "https://example.com/meetings/123"
+    }
+  ]
+}

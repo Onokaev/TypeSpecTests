@@ -1,0 +1,85 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SomeCharName more names than 20 chars make sure it is actually long",
+    "x-privacy-policy-url": "https://app.suno.ai/privacy",
+    "x-legal-info-url": "https://app.suno.ai/legal",
+    "x-ai-description": "Suno is a song tool",
+    "x-description-for-human": "Suno is a tool that can generate songs based on a description.",
+    "contact": {
+      "email": "ionutro@microsoft.com"
+    },
+    "x-logo": {
+      "url": "https://th.bing.com/th?id=OSK.935650835684F7E18AC3F31034DE6DF3"
+    },
+    "version": "0.0.0"
+  },
+  "tags": [],
+  "paths": {
+    "/createSong": {
+      "post": {
+        "operationId": "embedded",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "The request has succeeded.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "knowledgeSources": {
+                    "type": "array",
+                    "items": {}
+                  }
+                },
+                "required": [
+                  "knowledgeSources"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "createSong",
+        "description": "Create a song given the user preferences",
+        "parameters": [
+          {
+            "name": "topic",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request has succeeded.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}

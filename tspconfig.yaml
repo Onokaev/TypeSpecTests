@@ -1,11 +1,11 @@
 emit:
   - "@typespec/openapi3"
-  - "@microsoft/typespec-copilot-skills"
+  - "@microsoft/typespec-m365-copilot"
 options:
   "@typespec/openapi3":
     emitter-output-dir: "{project-root}/.generated/openapi"
     file-type: json 
-  "@microsoft/typespec-copilot-skills":
+  "@microsoft/typespec-m365-copilot":
     emitter-output-dir: "{project-root}/.generated/declarative-agent"
     file-type: json
     output-file: "agent-manifest"

@@ -1,15 +1,8 @@
 {
-  "name": "typespectests",
+  "name": "typespecadaptivecards",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@microsoft/typespec-copilot-skills": "file:packages/microsoft-typespec-copilot-skills-0.0.1-preview.8.tgz",
+  "devDependencies": {
+    "@microsoft/typespec-m365-copilot": "file:packages/microsoft-typespec-m365-copilot-0.0.1-preview.11.tgz",
     "@typespec/compiler": "^1.0.0-rc.1",
     "@typespec/http": "^1.0.0-rc.1",
     "@typespec/openapi": "^1.0.0-rc.1",

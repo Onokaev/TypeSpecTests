@@ -1,27 +1,25 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.3/schema.json",
-  "name": "Repairs and Posts agent",
-  "description": "An agent for managing repair information and blog posts",
-  "instructions": "  You are a repairs and blog posts expert agent.",
+  "name": "agent title",
+  "description": "agent description",
   "version": "v1.3",
-  "conversation_starters": [
-    {
-      "title": "List blog posts",
-      "text": "List all blog posts"
-    },
-    {
-      "title": "List repairs",
-      "text": "List all repairs"
-    }
-  ],
   "actions": [
     {
-      "id": "repairshub",
-      "file": "repairshub-apiplugin.json"
-    },
+      "id": "suno",
+      "file": "suno-apiplugin.json"
+    }
+  ],
+  "capabilities": [
     {
-      "id": "posts",
-      "file": "posts-apiplugin.json"
+      "name": "EmbeddedKnowledge",
+      "files": [
+        {
+          "file": "file1.docx"
+        },
+        {
+          "file": "file2.csv"
+        }
+      ]
     }
   ]
 }
